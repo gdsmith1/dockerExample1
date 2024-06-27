@@ -5,12 +5,12 @@ variable "releaseplatforms" {
   default = ["linux/amd64", "linux/arm64"]
 }
 
-# Overarching group
+# Default group of targets
 group "default" {
   targets = ["runner", "nexus"]
 }
 
-# Defines the runner target build
+# Defines the runner target
 target "runner" {
   context = "./runner"
   dockerfile = "./Dockerfile"
@@ -20,7 +20,7 @@ target "runner" {
   push = true
 }
 
-# Defines the nexus target build
+# Defines the nexus target
 target "nexus" {
   context = "./nexus"
   dockerfile = "./Dockerfile"

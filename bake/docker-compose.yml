@@ -1,3 +1,5 @@
+# A standard docker-compose file
+
 services:
   # runner service
   runner:
