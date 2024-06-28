@@ -1,7 +1,7 @@
 # A standard docker-compose file
 
 services:
-  # runner service
+  # github actions runner service
   runner:
     # directory where the Dockerfile is located
     build: ./runner
@@ -11,6 +11,7 @@ services:
     # set the image name and tag - needed for the deployment
     image: gdsmith1/runner:latest
 
+  # nexus oss server service
   nexus:
     build: ./nexus
     ports:
